@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            margin: 100px auto;
+            display: block;
+            width: 200px;
+            height: 60px;
+            border-radius: 20px;
+            background-color: rgb(255, 162, 162);
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span>姓名</span>
+
+    <script>
+        let name = document.querySelector('span');
+        let arr = ['张飞', '张雨', '六飞', '小飞', '绘画飞', '哈哈飞', '无聊飞'];
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        let i = getRandomInt(0, arr.length - 1);
+        name.innerText = arr[i];
+        // arr.splice(i, 1)
+    </script>
+
+</body>
+
+</html>
